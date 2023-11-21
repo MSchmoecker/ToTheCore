@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14b9601ea035a3042af3f3b7a2856ac5, type: 3}
+  m_Name: MS_ToTheCoreRadar_Recipe
+  m_EditorClassIdentifier: 
+  category: CraftingRecipe
+  nameID: MS_ToTheCoreRadar_Recipe
+  location: blacksmith
+  hideRecipe: 0
+  ingredients:
+  - itemCount: 2
+    itemType: {fileID: 11400000, guid: b115b475f43319b41b792c9685185812, type: 2}
+  - itemCount: 2
+    itemType: {fileID: 11400000, guid: 1e9a0da0dc207bb4181cef68f48cd318, type: 2}
+  - itemCount: 2
+    itemType: {fileID: 11400000, guid: a3f0584be12ef434386a7fffaea7095e, type: 2}
+  recipeOutput:
+    outputItem:
+      stackSize: 1
+      item:
+        itemType: {fileID: 11400000, guid: da99d5c4e7544b24290a7a0da728a028, type: 2}
+  craftRecipeCategory: 1

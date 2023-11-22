@@ -17,15 +17,15 @@ MonoBehaviour:
   location: blacksmith
   hideRecipe: 0
   ingredients:
-  - itemCount: 2
+  - itemCount: 40
     itemType: {fileID: 11400000, guid: b115b475f43319b41b792c9685185812, type: 2}
-  - itemCount: 2
+  - itemCount: 40
     itemType: {fileID: 11400000, guid: 1e9a0da0dc207bb4181cef68f48cd318, type: 2}
-  - itemCount: 2
+  - itemCount: 40
     itemType: {fileID: 11400000, guid: a3f0584be12ef434386a7fffaea7095e, type: 2}
   recipeOutput:
     outputItem:
       stackSize: 1
       item:
         itemType: {fileID: 11400000, guid: da99d5c4e7544b24290a7a0da728a028, type: 2}
-  craftRecipeCategory: 1
+  craftRecipeCategory: 6

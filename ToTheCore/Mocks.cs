@@ -1,4 +1,5 @@
-﻿using BelowTheStone.Crafting;
+﻿using System.Linq;
+using BelowTheStone.Crafting;
 using BelowTheStone.InventorySystem;
 using HarmonyLib;
 using UnityEngine;
@@ -26,8 +27,33 @@ namespace ToTheCore {
         }
 
         public static void FixMocks(GameObject gameObject) {
-            if (gameObject && gameObject.TryGetComponent(out EquippedItem equippedItem)) {
+            if (!gameObject) {
+                return;
+            }
+
+            if (gameObject.TryGetComponent(out EquippedItem equippedItem)) {
                 FixMocks(equippedItem);
+            }
+
+            if (gameObject.TryGetComponent(out Renderer renderer)) {
+                FixMocks(renderer);
+            }
+
+            foreach (Transform child in gameObject.transform) {
+                FixMocks(child.gameObject);
+            }
+        }
+
+        public static void FixMocks(Renderer renderer) {
+            if (renderer && renderer.sharedMaterial && renderer.sharedMaterial.name.StartsWith("Mock_")) {
+                string materialName = renderer.sharedMaterial.name.Substring(5);
+
+                if (materialName.EndsWith(" (Instance)")) {
+                    materialName = materialName.Substring(0, materialName.Length - 11);
+                }
+
+                Material material = Resources.FindObjectsOfTypeAll<Material>().First(mat => mat.name == materialName);
+                AccessTools.PropertySetter(typeof(Renderer), "sharedMaterial").Invoke(renderer, new object[] { material });
             }
         }
 

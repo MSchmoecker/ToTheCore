@@ -44,7 +44,7 @@
             <HintPath>$(BELOW_THE_STONE_INSTALL)/Below The Stone_Data/Managed/Assembly-CSharp.dll</HintPath>
         </Reference>
         <Reference Include="Bts-Util">
-            <HintPath>$(BELOW_THE_STONE_INSTALL)/Bts-Util/Bts-Util.dll</HintPath>
+            <HintPath>$(BELOW_THE_STONE_INSTALL)/Below The Stone_Data/Managed/Bts-Util.dll</HintPath>
         </Reference>
         <Reference Include="BepInEx">
             <HintPath>$(BELOW_THE_STONE_INSTALL)/BepInEx/core/BepInEx.dll</HintPath>

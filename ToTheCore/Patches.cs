@@ -16,8 +16,6 @@ namespace ToTheCore {
 
         [HarmonyPatch(typeof(SODatabase), nameof(SODatabase.Init), new Type[0]), HarmonyPrefix]
         public static void SODatabaseInit(SODatabase __instance) {
-            Plugin.Log.LogInfo("SODatabase.Init");
-
             foreach (DatabaseElement databaseElement in __instance.MasterList) {
                 if (databaseElement is ItemType itemType) {
                     vanillaItems[itemType.NameID] = itemType;

@@ -16,6 +16,13 @@ namespace ToTheCore {
         }
 
         private bool CheckItemUse(BasicItemLogic obj) {
+            var level = LevelManager.CurrentLevel;
+
+            if (level == null) {
+                UI_ShortTextPresenter.DisplayText("Can only be used in the caves");
+                return false;
+            }
+
             return true;
         }
 
@@ -29,6 +36,10 @@ namespace ToTheCore {
             List<Vector2> exitPositions = new List<Vector2>();
 
             foreach (Chunk chunk in level.levelGrid.ChunkData) {
+                if (chunk?.EntityList == null) {
+                    continue;
+                }
+
                 foreach (EntityData entityData in chunk.EntityList) {
                     if (!entityData.EntityType || !entityData.EntityType.MainEntityPrefab) {
                         continue;

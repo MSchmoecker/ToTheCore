@@ -79,11 +79,9 @@
       <EmbeddedResource Include="tothecore" />
     </ItemGroup>
     <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets"/>
-    <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
-         Other similar extension points exist, see Microsoft.Common.targets.
     <Target Name="BeforeBuild">
+        <Copy Condition="Exists('$(SolutionDir)ToTheCoreUnity/AssetBundles/StandaloneWindows/tothecore')" SourceFiles="$(SolutionDir)ToTheCoreUnity/AssetBundles/StandaloneWindows/tothecore" DestinationFolder="$(SolutionDir)$(TargetName)" />
     </Target>
-        -->
     <Target Name="AfterBuild" Condition="Exists('$(MOD_DEPLOYPATH)')">
         <Exec Command="$(SolutionDir)Libraries/Debug/pdb2mdb.exe $(TargetPath)" />
         <MakeDir Directories="$(MOD_DEPLOYPATH)/$(TargetName)" />

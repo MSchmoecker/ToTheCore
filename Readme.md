@@ -1,11 +1,7 @@
 ﻿# To The Core
 
 Adds a radar item that shows the nearest exit to the player.
-Crafted with 40 tin, 40 copper and 40 iron.
-
-Please be especially careful when using this mod.
-Currently, the game will thrown an error when loading an save file where an item is missing and won't load it.
-Make sure to backup your save files before using this mod.
+Crafted with 10 tin, 10 copper and 10 iron.
 
 ![ShowcaseCrafting](Docs/ShowcaseCrafting.png)
 
@@ -42,6 +38,10 @@ This mod requires BepInEx to work, it's a modding framework that allows multiple
 
 
 ## Changelog
+
+0.2.0
+- Changed the radar text to only show the distance, not the exact direction
+- Changed the recipe to require 10 ingots each, with a resulting stack size of 3
 
 0.1.0
 - Release

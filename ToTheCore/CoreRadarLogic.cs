@@ -63,11 +63,9 @@ namespace ToTheCore {
             }
 
             Vector2 nearestExit = exitPositions.OrderBy(position => Vector2.Distance(position, itemPosition)).First();
-            BlockPosition direction = new BlockPosition(nearestExit - itemPosition);
+            int distance = (int)Vector2.Distance(nearestExit, itemPosition);
+            UI_ShortTextPresenter.DisplayText($"Nearest exit is {distance} block away!");
 
-            string xDirection = direction.x > 0 ? $"{direction.x} blocks east" : $"{-direction.x} blocks west";
-            string yDirection = direction.y > 0 ? $"{direction.y} blocks north" : $"{-direction.y} blocks south";
-            UI_ShortTextPresenter.DisplayText($"Nearest exit is {xDirection} and {yDirection} of you!");
             return true;
         }
     }

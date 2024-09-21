@@ -1,0 +1,9 @@
+{
+  "name": "ToTheCore",
+  "version_number": "0.2.0",
+  "website_url": "https://github.com/MSchmoecker/ToTheCore",
+  "description": "Adds a radar item that shows the nearest exit to the player",
+  "dependencies": [
+    "BepInEx-BepInExPack-5.4.2100"
+  ]
+}
